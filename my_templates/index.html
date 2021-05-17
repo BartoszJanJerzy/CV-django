@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bartosz Wójtowicz CV</title>
+
+<!--        GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+<!--        MY CSS-->
+        <link href="{% static 'css/1 - general.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/2 - title.css' %}" rel="stylesheet" type="text/css">
+<!--         JAVA SCRIPT -->
+        <script src="{% static 'script1.js' %}" crossorigin="anonymous" defer></script>
+<!--         FONT-AWESOME -->
+        <script src="https://kit.fontawesome.com/196ce09d2f.js" crossorigin="anonymous"></script>
+<!--         MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="content">
+<!--        MENU-->
+<!--        TITLE-->
+        <div class="page" id="title-page">
+            <img id="personal-img" src="{% static 'personal.jpg' %}">
+
+            <div id="names-div">
+                <div class="heading">
+                    <a href="https://www.linkedin.com/in/bartosz-w%C3%B3jtowicz-0824b21ab/"><i class="fab fa-4x fa-linkedin"></i></a>
+                    <h1 id="name">Bartosz Wójtowicz</h1>
+                </div>
+                <div class="heading">
+                    <a href="https://phd.kul.pl/"><i class="fas fa-2x fa-graduation-cap"></i></a>
+                    <h2 id="education">Szkoła Doktorska</h2>
+                </div>
+                <div class="heading">
+                    <i id="mail-icon" class="fas fa-2x fa-envelope"></i>
+                    <h2 id="mail">bartoszjanjerzy @ gmail.com</h2>
+                    <div class="heading" id="copy-mail-confirm">Skopiowano!</div>
+                </div>
+                <div class="heading">
+                    <i id="phone-icon" class="fas fa-2x fa-phone-square-alt" value="519466559"></i>
+                    <h2 id="phone">519-466-559</h2>
+                    <div class="heading" id="copy-phone-confirm">Skopiowano!</div>
+                </div>
+
+                <div id="title-link-div">
+                    <a class="title-link" id="about-link" href="#about">O mnie</a>
+                    <a class="title-link" id="skills-link" href="#skills">Umiejetności</a>
+                    <a class="title-link" id="projects-link" href="#projects">Projekty</a>
+                </div>
+            </div>
+            <div id="bufor"></div>
+        </div>
+
+<!--        ABOUT-->
+<!--        SKILLS-->
+<!--        PROJECTS-->
+    </div>
+</body>
+</html>
