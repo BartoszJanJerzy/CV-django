@@ -14,12 +14,12 @@
 var shown = 0;
 
 $('#burger').click(function(){
-    if(shown === 1) {
-        $('#sub-menu').show(500);
-        shown = 0;
+    if(shown === 0) {
+        $('#menu').show(500);
+        shown = 1;
     }
     else {
-        $('#sub-menu').hide(500);
-        shown = 1;
+        $('#menu').hide(500);
+        shown = 0;
     }
 });

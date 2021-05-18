@@ -10,6 +10,7 @@
 <!--        MY CSS-->
         <link href="{% static '1 - general.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '2 - title.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '3 - about.css' %}" rel="stylesheet" type="text/css">
 <!--         JAVA SCRIPT -->
         <script src="{% static 'jquery.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script1.js' %}" crossorigin="anonymous" defer></script>
@@ -29,9 +30,8 @@
                 <a class="menu-link" href="#skills-page">Umiejetności</a>
                 <a class="menu-link" href="#projects-page">Projekty</a>
             </div>
-            <i class="fas fa-3x fa-hamburger" id="burger"></i>
         </div>
-
+        <i class="fas fa-3x fa-hamburger" id="burger"></i>
 
 
 <!--        TITLE-->
@@ -50,24 +50,47 @@
                 <div class="heading">
                     <i id="mail-icon" class="fas fa-2x fa-envelope"></i>
                     <h2 id="mail">bartoszjanjerzy @ gmail.com</h2>
-                    <div class="heading" id="copy-mail-confirm">Skopiowano!</div>
+                    <i id="copy-mail-confirm" class="fas fa-clone" style="color:rgba(178, 255, 158, 1)"></i>
                 </div>
                 <div class="heading">
                     <i id="phone-icon" class="fas fa-2x fa-phone-square-alt" value="519466559"></i>
                     <h2 id="phone">519-466-559</h2>
-                    <div class="heading" id="copy-phone-confirm">Skopiowano!</div>
+                    <i id="copy-phone-confirm" class="fas fa-clone copy" style="color:rgba(178, 255, 158, 1)"></i>
                 </div>
 
                 <div id="title-link-div">
-                    <a class="title-link" id="about-link" href="#about">O mnie</a>
-                    <a class="title-link" id="skills-link" href="#skills">Umiejetności</a>
-                    <a class="title-link" id="projects-link" href="#projects">Projekty</a>
+                    <a class="title-link" id="about-link" href="#about-page">O mnie</a>
+                    <a class="title-link" id="skills-link" href="#skills-page">Umiejetności</a>
+                    <a class="title-link" id="projects-link" href="#projects-page">Projekty</a>
                 </div>
             </div>
             <div id="bufor"></div>
         </div>
 
 <!--        ABOUT-->
+        <div class="page" id="about-page">
+            <div id="about-text-div">
+                <h1 id="about-title">O mnie</h1>
+                <i class="fas fa-2x fa-user-tie"></i>
+                <P class="about-par">Jestem młodym naukowcem w Szkole Doktorskiej - prowadzę badania empiryczne dotyczące otwartości
+                    poznawczej w kwestiach światopoglądu, polityki i religii.</P>
+                <P class="about-par">W pracy poza uczelnią (full remote) tworzę narzędzia do badań rynkowych, analizy rynkowe, wykonuję obliczenia statystyczne.</P>
+
+                <i class="fab fa-2x fa-python"></i>
+                <P class="about-par">Moim najbliższym celem zawodowym jest wejście do branży IT - od roku poświęcam wolny czas na naukę programowania.</P>
+                <P class="about-par">Uczę się głównie Pythona w kierunku analizy danych i tworzenia aplikacji webowych.</P>
+                <P class="about-par">Poznałem również podstawy front-endu.</P>
+
+                <i class="fas fa-2x fa-users"></i>
+                <P class="about-par">Praca w zespole naukowym nauczyła mnie systematyczności, samodyscypliny i komunikacji.</P>
+                <P class="about-par">Potrafię również sam prowadzić zespół - z sukcesami przewodniczyłem Studenckiemu Kołu Neuronauk.</P>
+
+                <i class="fas fa-2x fa-football-ball"></i><i class="fas fa-2x fa-mountain"></i><i class="fas fa-2x fa-music"></i>
+                <P class="about-par">Nadmair energii uwalniam grając w drużynie footballu amerykańskiego.</P>
+                <P class="about-par">Uwielbiam też wędrować po górach, śpiewać i grać na gitarze.</P>
+            </div>
+            <img id="personal-2-img" src="{% static 'personal-2.jpg' %}">
+        </div>
 <!--        SKILLS-->
 <!--        PROJECTS-->
     </div>

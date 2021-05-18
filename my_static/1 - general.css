@@ -14,7 +14,7 @@
 }
 .page {
     width:85%;
-    height:930px;
+    min-height:930px;
     margin:0px auto;
 
     /*border:1px solid white;*/
@@ -22,20 +22,21 @@
 
 #menu {
     width:100%;
-
     position:fixed;
     top:0%;
+    left:0.5%;
+    right:0.5%;
 
     background-color:rgba(13,13,13,1);
     color:rgba(240,240,240,1);
 
+    display:none;
+}
+#sub-menu {
     display:flex;
     flex-wrap:wrap;
     align-items:top;
     justify-content:center;
-}
-.sub-menu {
-    display:none;
 }
 .menu-link {
     margin:5px 20px 5px 20px;
@@ -54,6 +55,7 @@
     position:fixed;
     top:1%;
     right:5%;
+    color:rgba(240,240,240,1);
 
     transition:1s;
 }

@@ -1,0 +1,49 @@
+#about-page {
+    /*border:1px solid white;*/
+    margin-top:1px;
+    padding-bottom:150px;
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+
+/* PHOTO */
+#personal-2-img {
+    width:500px;
+    float:left;
+    margin-left:7%;
+    margin-top:2%;
+    margin-bottom:2%;
+
+    border:10px solid rgba(175, 252, 65, 1);
+    border-radius:250px;
+}
+
+/* TITLE */
+#about-title {
+    width:100%;
+    font-size:80px;
+    color:rgba(8, 99, 117,1);
+
+    margin:0px;
+    padding:0px;
+}
+
+/* TEXT */
+#about-text-div {
+    width:60%;
+    margin-top:4%;
+    margin-bottom:2%;
+}
+.about-par {
+    font-size:20px;
+    padding:0px;
+    margin:0px;
+}
+#about-text-div i {
+    margin-top:25px;
+    margin-right:5px;
+}
+
