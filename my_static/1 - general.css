@@ -1,0 +1,64 @@
+/* GENERAL */
+#content {
+    width:100%;
+    height:3920px;
+
+    background-color:rgba(10,10,10,1);
+    color:rgba(240,240,240,1);
+    font-family: 'Montserrat', sans-serif;
+
+    background-image:url("purple.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-height:100%;
+}
+.page {
+    width:85%;
+    height:930px;
+    margin:0px auto;
+
+    /*border:1px solid white;*/
+}
+
+#menu {
+    width:100%;
+
+    position:fixed;
+    top:0%;
+
+    background-color:rgba(13,13,13,1);
+    color:rgba(240,240,240,1);
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items:top;
+    justify-content:center;
+}
+.sub-menu {
+    display:none;
+}
+.menu-link {
+    margin:5px 20px 5px 20px;
+
+    color:rgba(240,240,240,1);
+    text-decoration:none;
+    font-size:30px;
+
+    transition:1s;
+}
+.menu-link:hover {
+    color:rgba(8, 99, 117, 1);
+    transition: 1s;
+}
+#burger {
+    position:fixed;
+    top:1%;
+    right:5%;
+
+    transition:1s;
+}
+#burger:hover {
+    color:rgba(8, 99, 117, 1);
+
+    transition:1s;
+}
