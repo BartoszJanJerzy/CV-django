@@ -11,6 +11,7 @@
         <link href="{% static '1 - general.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '2 - title.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '3 - about.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '4 - kursy.css' %}" rel="stylesheet" type="text/css">
 <!--         JAVA SCRIPT -->
         <script src="{% static 'jquery.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script1.js' %}" crossorigin="anonymous" defer></script>
@@ -27,12 +28,11 @@
             <div id="sub-menu">
                 <a class="menu-link" href="#title-page">Start</a>
                 <a class="menu-link" href="#about-page">About</a>
-                <a class="menu-link" href="#skills-page">Umiejetności</a>
+                <a class="menu-link" href="#skills-page">Kursy</a>
                 <a class="menu-link" href="#projects-page">Projekty</a>
             </div>
         </div>
         <i class="fas fa-3x fa-hamburger" id="burger"></i>
-
 
 <!--        TITLE-->
         <div class="page" id="title-page">
@@ -60,7 +60,7 @@
 
                 <div id="title-link-div">
                     <a class="title-link" id="about-link" href="#about-page">O mnie</a>
-                    <a class="title-link" id="skills-link" href="#skills-page">Umiejetności</a>
+                    <a class="title-link" id="skills-link" href="#skills-page">Kursy</a>
                     <a class="title-link" id="projects-link" href="#projects-page">Projekty</a>
                 </div>
             </div>
@@ -74,7 +74,8 @@
                 <i class="fas fa-2x fa-user-tie"></i>
                 <P class="about-par">Jestem młodym naukowcem w Szkole Doktorskiej - prowadzę badania empiryczne dotyczące otwartości
                     poznawczej w kwestiach światopoglądu, polityki i religii.</P>
-                <P class="about-par">W pracy poza uczelnią (full remote) tworzę narzędzia do badań rynkowych, analizy rynkowe, wykonuję obliczenia statystyczne.</P>
+                <P class="about-par">W pracy poza uczelnią (młodszy specjalista ds. badań, full remote, od. 12.2020r.)
+                    tworzę narzędzia do badań rynkowych, analizy rynkowe, wykonuję obliczenia statystyczne.</P>
 
                 <i class="fab fa-2x fa-python"></i>
                 <P class="about-par">Moim najbliższym celem zawodowym jest wejście do branży IT - od roku poświęcam wolny czas na naukę programowania.</P>
@@ -86,12 +87,30 @@
                 <P class="about-par">Potrafię również sam prowadzić zespół - z sukcesami przewodniczyłem Studenckiemu Kołu Neuronauk.</P>
 
                 <i class="fas fa-2x fa-football-ball"></i><i class="fas fa-2x fa-mountain"></i><i class="fas fa-2x fa-music"></i>
-                <P class="about-par">Nadmair energii uwalniam grając w drużynie footballu amerykańskiego.</P>
+                <P class="about-par">Nadmair energii pożytkuję grając w drużynie footballu amerykańskiego.</P>
                 <P class="about-par">Uwielbiam też wędrować po górach, śpiewać i grać na gitarze.</P>
             </div>
             <img id="personal-2-img" src="{% static 'personal-2.jpg' %}">
         </div>
+
 <!--        SKILLS-->
+        <div class="page" id="skills-page">
+            <h1 id="kursy-title">Ukończone kursy</h1>
+            <div id="kursy-div">
+                {% for k in kurs%}
+                    <a class="kurs-link" href="https://www.udemy.com/course/{{ k.link }}">
+                        <div class="kurs-div">
+                            <p>
+                                <i class="{{ k.icon }}"></i>
+                                <i class="{{ k.icon2 }}"></i>
+                                <br>
+                                {{ k.title }}
+                            </p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
 <!--        PROJECTS-->
     </div>
 </body>

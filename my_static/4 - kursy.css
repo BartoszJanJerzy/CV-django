@@ -1,0 +1,53 @@
+#skills-page {
+    /*border:1px solid white;*/
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+#kursy-title {
+    width:99%;
+    font-size:80px;
+    color:rgba(178, 255, 158,1);
+    text-align:center;
+
+    margin:0px auto;
+    margin-top:4%;
+    padding:0px;
+}
+#kursy-div {
+    width:85%;
+    margin:0px auto;
+    margin-bottom:150px;
+
+    /*border:1px solid silver;*/
+    text-align:center;
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+.kurs-link {
+    width:300px;
+    height:300px;
+    margin:10px;
+
+    background-color:rgba(240,240,240,0.5);
+    color:rgba(10,10,10,1);
+    font-size:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:1s;
+}
+.kurs-link:hover{
+    background-color:rgba(240,240,240,0.75);
+    color:rgba(8, 99, 117,1);
+
+    transition:1s;
+}
+

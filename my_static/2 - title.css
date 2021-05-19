@@ -70,7 +70,7 @@
     transition:1s;
 }
 #names-div i:hover {
-    color:rgba(8, 99, 117,1);
+    color:rgba(175, 252, 65,1);
     cursor:pointer;
 
     transition:1s;
@@ -104,7 +104,7 @@
     transition:1s;
 }
 .title-link:hover {
-    border-bottom:2px solid rgba(8, 99, 117, 1);
+    border-bottom:2px solid rgba(175, 252, 65, 1);
     color:rgba(240,240,240,1);
 
     transition:1s;
@@ -126,7 +126,7 @@
     margin-right:7%;
     margin-top:10%;
 
-    border:10px solid rgba(175, 252, 65, 1);
-    border-radius:250px;
+    border:10px solid rgba(8, 99, 117, 1);
+    border-radius:250px 0px 250px 250px;
 }
 

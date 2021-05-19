@@ -17,15 +17,15 @@
     margin-top:2%;
     margin-bottom:2%;
 
-    border:10px solid rgba(175, 252, 65, 1);
-    border-radius:250px;
+    border:10px solid rgba(8, 99, 117, 1);
+    border-radius:250px 250px 0px 250px;
 }
 
 /* TITLE */
 #about-title {
     width:100%;
     font-size:80px;
-    color:rgba(8, 99, 117,1);
+    color:rgba(178, 255, 158,1);
 
     margin:0px;
     padding:0px;
