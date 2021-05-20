@@ -54,6 +54,8 @@
 }
 #name {
     font-size:80px;
+    color:rgba(178, 255, 158, 1);
+
     padding:0px;
     margin:0px;
 }

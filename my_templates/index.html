@@ -12,10 +12,12 @@
         <link href="{% static '2 - title.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '3 - about.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '4 - kursy.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '5 - projects.css' %}" rel="stylesheet" type="text/css">
 <!--         JAVA SCRIPT -->
         <script src="{% static 'jquery.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script1.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script2.js' %}" crossorigin="anonymous" defer></script>
+        <script src="{% static 'script3.js' %}" crossorigin="anonymous" defer></script>
 <!--         FONT-AWESOME -->
         <script src="https://kit.fontawesome.com/196ce09d2f.js" crossorigin="anonymous"></script>
 <!--         MDB -->
@@ -111,7 +113,59 @@
                 {% endfor %}
             </div>
         </div>
+
 <!--        PROJECTS-->
+        <div class="page" id="projects-page">
+            <h1 id="projects-title">Przykłady moich projektów</h1>
+
+            <div id="projects-div">
+                <div class="project-icon" id="boredom-script">
+                    <div class="project-icon-head">
+                        <i class="fas fa-2x fa-brain"></i>
+                        <p>
+                            Analiza statystyczna autorskiego badania
+                            <a href="https://github.com/BartoszJanJerzy/stats/tree/main/Boredom%20experiment">
+                                <i class="fas fa-external-link-alt project-i-link"></i></a>
+                        </p>
+                    </div>
+                    <div class="project-icon-body" id="boredom-body">
+                        <p>Przykład analizy statystycznej wykonanej do autorskiego badania.</p>
+                        <p>Skrypt zawiera pre-proccessing danych, obliczenia rzetelności skal, testów t, wielkości efektów,
+                            regresji liniowej i krzywoliniiowej.</p>
+                        <p>Analizy wykonane, m.in. z bibliotek scikit-learn, scipy, statistics.</p>
+                        <p>Wykresy wykonałem w bibliotece python-plotly.</p>
+                        <p>W linku można znaleźc również inne podobnie wykonane przeze mnie skrypty</p>
+                    </div>
+                </div>
+
+                <div class="project-icon" id="ocr-app">
+                    <div class="project-icon-head">
+                        <i class="fas fa-2x fa-eye"></i>
+                        <p>Aplikacja OCR</p>
+                    </div>
+                    <div class="project-icon-body" id="ocr-app-body">
+                        <p>Dodatkowy projekt z mojej obecnej pracy, w trakcie produkcji - kilka słów bez zdradzania dokładnego celu.</p>
+                        <p>Aplikacja webbowa zbudowana w python-django odczytująca tekst z obrazów lub .pdf.</p>
+                        <p>Odczytany tekst jest przetwarzany w celu wyszukania zadekalrowanych fraz.</p>
+                        <p>W backendzie skomunikowanych jest seria funkcji (views) wykonujących pojedyncze kroki analizy.</p>
+                        <p>Użyte biblioteki to, m.in. py-tesseract, pdf2image, regex, opencv</p>
+                    </div>
+                </div>
+
+                <div class="project-icon" id="ih-grant">
+                    <div class="project-icon-head">
+                        <i class="fas fa-2x fa-graduation-cap"></i>
+                        <p>Uniwersytecki grant badawczy</p>
+                    </div>
+                    <div class="project-icon-body" id="ih-grant-body">
+                        <p>Jestem pomysłodawcą i jedną z trzech osób interdyscyplinarnego zespołu grantowego.</p>
+                        <p>Autorskie badanie dotyczy otwartości poznawczej w kontekście polityki.</p>
+                        <p>Samodzielnie przeprowadziłem analizy regresji krzywoliniowej w skrypcie Python z biblioteką scikit-learn.</p>
+                        <p>Wyniki wizualizowałem z bilbioteką python-plotly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
