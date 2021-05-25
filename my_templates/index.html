@@ -42,7 +42,7 @@
 
             <div id="names-div">
                 <div class="heading">
-                    <a href="https://www.linkedin.com/in/bartosz-w%C3%B3jtowicz-0824b21ab/"><i class="fab fa-4x fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/bartosz-w%C3%B3jtowicz-0824b21ab/" target="_blank"><i class="fab fa-4x fa-linkedin"></i></a>
                     <h1 id="name">Bartosz Wójtowicz</h1>
                 </div>
                 <div class="heading">
@@ -88,7 +88,7 @@
                 <P class="about-par">Praca w zespole naukowym nauczyła mnie systematyczności, samodyscypliny i komunikacji.</P>
                 <P class="about-par">Potrafię również sam prowadzić zespół - z sukcesami przewodniczyłem Studenckiemu Kołu Neuronauk.</P>
 
-                <i class="fas fa-2x fa-football-ball"></i><i class="fas fa-2x fa-mountain"></i><i class="fas fa-2x fa-music"></i>
+                <i class="fas fa-2x fa-football-ball"></i>
                 <P class="about-par">Nadmair energii pożytkuję grając w drużynie footballu amerykańskiego.</P>
                 <P class="about-par">Uwielbiam też wędrować po górach, śpiewać i grać na gitarze.</P>
             </div>
@@ -100,7 +100,7 @@
             <h1 id="kursy-title">Ukończone kursy</h1>
             <div id="kursy-div">
                 {% for k in kurs%}
-                    <a class="kurs-link" href="https://www.udemy.com/course/{{ k.link }}">
+                    <a class="kurs-link" href="https://www.udemy.com/course/{{ k.link }}" target="_blank">
                         <div class="kurs-div">
                             <p>
                                 <i class="{{ k.icon }}"></i>
@@ -124,7 +124,7 @@
                         <i class="fas fa-2x fa-brain"></i>
                         <p>
                             Analiza statystyczna autorskiego badania
-                            <a href="https://github.com/BartoszJanJerzy/stats/tree/main/Boredom%20experiment">
+                            <a href="https://github.com/BartoszJanJerzy/stats/tree/main/Boredom%20experiment" target="_blank">
                                 <i class="fas fa-external-link-alt project-i-link"></i></a>
                         </p>
                     </div>
@@ -149,6 +149,50 @@
                         <p>Odczytany tekst jest przetwarzany w celu wyszukania zadekalrowanych fraz.</p>
                         <p>W backendzie skomunikowanych jest seria funkcji (views) wykonujących pojedyncze kroki analizy.</p>
                         <p>Użyte biblioteki to, m.in. py-tesseract, pdf2image, regex, opencv</p>
+                    </div>
+                </div>
+
+                <div class="project-icon" id="regression-app">
+                    <div class="project-icon-head">
+                        <i class="fas fa-2x fa-chart-line"></i>
+                        <p>
+                            Aplikacja do regresji krzywoliniowej
+                            <a href="https://curvilinear-regressions.herokuapp.com/" target="_blank">
+                                <i class="fas fa-external-link-alt project-i-link"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="project-icon-body" id="regression-app-body">
+                        <p>Dodatkowy projekt w ramach treningu programowania.</p>
+                        <p>Aplikacja webbowa zbudowana w python-dash wizualizująca relacje między danymi.</p>
+                        <p>Użytkownik podaje bazę danych i wybiera z nich predyktor oraz zmienną zależną.</p>
+                        <p>Na ich podstawie obliczane są regresje liniowe i krzywoliniowe.</p>
+                        <p>Wyświetlany jest również interaktywny wykres.</p>
+                        <p>Użyte biblioteki to, m.in. dash, plotly, scikit-learn</p>
+                    </div>
+                </div>
+
+                <div class="project-icon" id="xml-data">
+                    <div class="project-icon-head">
+                        <i class="fas fa-2x fa-table"></i>
+                        <p>Przetwarzanie danych .xml</p>
+                    </div>
+                    <div class="project-icon-body" id="xml-data-body">
+                        <p>Wykorzystałem Pythonowe skille do odczytania danych .xml.</p>
+                        <p>Dane oryginalne posiadały kilkaset tysięcy rekordów i wielokrotnie zagnieżdżone tagi xml.</p>
+                        <p>Wartości z poszczególnych tagów zapisałem do obiektu DataFrame, a ten do pliku .csv.</p>
+                        <p>Wykorzystane biblioteki to xml i pandas.</p>
+                    </div>
+                </div>
+
+                <div class="project-icon" id="lime-tuning">
+                    <div class="project-icon-head">
+                        <i class="fas fa-2x fa-edit"></i>
+                        <p>Funkcjonalności java-script</p>
+                    </div>
+                    <div class="project-icon-body" id="lime-tuning-body">
+                        <p>Napisałem algorytmy w java-script dodające funkcjonalności do edytora ankiet.</p>
+                        <p>Polegają, m.in. na śledzeniu kursora respondenta oraz liczby kliknięć.</p>
                     </div>
                 </div>
 
