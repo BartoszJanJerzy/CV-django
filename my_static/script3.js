@@ -33,6 +33,13 @@ $('#lime-tuning').on('mouseleave', function(){
     $('#lime-tuning-body').hide(500);
 })
 
+$('#r-lesson').hover(function(){
+    $('#r-lesson-body').show(500);
+})
+$('#r-lesson').on('mouseleave', function(){
+    $('#r-lesson-body').hide(500);
+})
+
 $('#ih-grant').hover(function(){
     $('#ih-grant-body').show(500);
 })
