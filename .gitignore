@@ -1,6 +1,6 @@
 venv
+
+*pyc
 *.idea
 *.sqlite3
-*pyc
-my_media
-
+*.jpg
