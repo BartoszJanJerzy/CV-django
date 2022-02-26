@@ -6,16 +6,6 @@
     align-items:center;
     justify-content:center;
 }
-#kursy-title {
-    width:99%;
-    font-size:80px;
-    color:rgba(178, 255, 158,1);
-    text-align:center;
-
-    margin:0px auto;
-    margin-top:4%;
-    padding:0px;
-}
 #kursy-div {
     width:85%;
     margin:0px auto;

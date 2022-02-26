@@ -21,16 +21,6 @@
     border-radius:250px 250px 0px 250px;
 }
 
-/* TITLE */
-#about-title {
-    width:100%;
-    font-size:80px;
-    color:rgba(178, 255, 158,1);
-
-    margin:0px;
-    padding:0px;
-}
-
 /* TEXT */
 #about-text-div {
     width:60%;

@@ -22,14 +22,14 @@
         <link href="{% static '2 - title.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '3 - about.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '4 - kursy.css' %}" rel="stylesheet" type="text/css">
-        <link href="{% static '5 - projects.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '5 - exp.css' %}" rel="stylesheet" type="text/css">
 <!--         JAVA SCRIPT -->
         <script src="{% static 'jquery.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script1.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script2.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script3.js' %}" crossorigin="anonymous" defer></script>
 <!--         FONT-AWESOME -->
-        <script src="https://kit.fontawesome.com/196ce09d2f.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/607ca086f9.js" crossorigin="anonymous"></script>
 <!--         MDB -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
 </head>
@@ -87,7 +87,7 @@
 <!--        ABOUT-->
         <div class="page" id="about-page">
             <div id="about-text-div">
-                <h1 id="about-title">O mnie</h1>
+                <h1 class="title" id="about-title">O mnie</h1>
                 <i class="fas fa-2x fa-user-tie"></i>
                 <P class="about-par">Jestem młodym naukowcem w Szkole Doktorskiej - prowadzę badania empiryczne dotyczące otwartości
                     poznawczej w kwestiach światopoglądu, polityki i religii.</P>
@@ -112,7 +112,7 @@
 
 <!--        SKILLS-->
         <div class="page" id="skills-page">
-            <h1 id="kursy-title">Ukończone kursy</h1>
+            <h1 class="title" id="kursy-title">Ukończone kursy</h1>
             <div id="kursy-div">
                 {% for k in kurs%}
                     <a class="kurs-link" href="https://www.udemy.com/course/{{ k.link }}" target="_blank">
@@ -129,112 +129,52 @@
             </div>
         </div>
 
-<!--        PROJECTS-->
-        <div class="page" id="projects-page">
-            <h1 id="projects-title">Przykłady moich projektów</h1>
-
-            <div id="projects-div">
-                <div class="project-icon" id="boredom-script">
-                    <div class="project-icon-head">
-                        <i class="fas fa-2x fa-brain"></i>
-                        <p>
-                            Analiza statystyczna autorskiego badania
-                            <a href="https://github.com/BartoszJanJerzy/stats/tree/main/Boredom%20experiment" target="_blank">
-                                <i class="fas fa-external-link-alt project-i-link"></i></a>
-                        </p>
-                    </div>
-                    <div class="project-icon-body" id="boredom-body">
-                        <p>Przykład analizy statystycznej wykonanej do autorskiego badania.</p>
-                        <p>Skrypt zawiera pre-proccessing danych, obliczenia rzetelności skal, testów t, wielkości efektów,
-                            regresji liniowej i krzywoliniiowej.</p>
-                        <p>Analizy wykonane, m.in. z bibliotek scikit-learn, scipy, statistics.</p>
-                        <p>Wykresy wykonałem w bibliotece python-plotly.</p>
-                        <p>W linku można znaleźc również inne podobnie wykonane przeze mnie skrypty</p>
-                    </div>
+<!--        JOB EXPERIENCE-->
+        <div class="exp" id="exp-page">
+            <h1 class="title" id="exp-title">Professional experience</h1>
+            <div id="graphs-div">
+                <div class="graph-div" id="exp-graph">
+                    {% if exp_graph %}
+                    {{ exp_graph|safe }}
+                    {% else %}
+                    <p>No graph was provided.</p>
+                    {% endif %}
                 </div>
-
-                <div class="project-icon" id="ocr-app">
-                    <div class="project-icon-head">
-                        <i class="fas fa-2x fa-eye"></i>
-                        <p>Aplikacja OCR</p>
-                    </div>
-                    <div class="project-icon-body" id="ocr-app-body">
-                        <p>Dodatkowy projekt z mojej obecnej pracy, w trakcie produkcji - kilka słów bez zdradzania dokładnego celu.</p>
-                        <p>Aplikacja webbowa zbudowana w python-django odczytująca tekst z obrazów lub .pdf.</p>
-                        <p>Odczytany tekst jest przetwarzany w celu wyszukania zadekalrowanych fraz.</p>
-                        <p>W backendzie skomunikowanych jest seria funkcji (views) wykonujących pojedyncze kroki analizy.</p>
-                        <p>Użyte biblioteki to, m.in. py-tesseract, pdf2image, regex, opencv</p>
-                    </div>
+                <div class="graph-div" id="task-graph">
+                    {% if task_graph %}
+                    {{ task_graph|safe }}
+                    {% else %}
+                    <p>No graph was provided.</p>
+                    {% endif %}
                 </div>
-
-                <div class="project-icon" id="regression-app">
-                    <div class="project-icon-head">
-                        <i class="fas fa-2x fa-chart-line"></i>
-                        <p>
-                            Aplikacja do regresji krzywoliniowej
-                            <a href="https://curvilinear-regressions.herokuapp.com/" target="_blank">
-                                <i class="fas fa-external-link-alt project-i-link"></i>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="project-icon-body" id="regression-app-body">
-                        <p>Dodatkowy projekt w ramach treningu programowania.</p>
-                        <p>Aplikacja webbowa zbudowana w python-dash wizualizująca relacje między danymi.</p>
-                        <p>Użytkownik podaje bazę danych i wybiera z nich predyktor oraz zmienną zależną.</p>
-                        <p>Na ich podstawie obliczane są regresje liniowe i krzywoliniowe.</p>
-                        <p>Wyświetlany jest również interaktywny wykres.</p>
-                        <p>Użyte biblioteki to, m.in. dash, plotly, scikit-learn</p>
-                    </div>
+                <div class="graph-div" id="data-types-graph">
+                    {% if data_types_graph %}
+                    {{ data_types_graph|safe }}
+                    {% else %}
+                    <p>No graph was provided.</p>
+                    {% endif %}
                 </div>
-
-                <div class="project-icon" id="xml-data">
-                    <div class="project-icon-head">
-                        <i class="fas fa-2x fa-table"></i>
-                        <p>Przetwarzanie danych .xml</p>
-                    </div>
-                    <div class="project-icon-body" id="xml-data-body">
-                        <p>Wykorzystałem Pythonowe skille do odczytania danych .xml.</p>
-                        <p>Dane oryginalne posiadały kilkaset tysięcy rekordów i wielokrotnie zagnieżdżone tagi xml.</p>
-                        <p>Wartości z poszczególnych tagów zapisałem do obiektu DataFrame, a ten do pliku .csv.</p>
-                        <p>Wykorzystane biblioteki to xml i pandas.</p>
-                    </div>
+                <div class="graph-div" id="skills-graph">
+                    {% if skills_graph %}
+                    {{ skills_graph|safe }}
+                    {% else %}
+                    <p>No graph was provided.</p>
+                    {% endif %}
                 </div>
+            </div>
 
-                <div class="project-icon" id="lime-tuning">
-                    <div class="project-icon-head">
-                        <i class="fas fa-2x fa-edit"></i>
-                        <p>Funkcjonalności java-script</p>
+<!--
+            <div id="exp-div">
+                <div class="exp-icon" id="boredom-script">
+                    <div class="exp-icon-head">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <p>Praca naukowa</p>
                     </div>
-                    <div class="project-icon-body" id="lime-tuning-body">
-                        <p>Napisałem algorytmy w java-script dodające funkcjonalności do edytora ankiet.</p>
-                        <p>Polegają, m.in. na śledzeniu kursora respondenta oraz liczby kliknięć.</p>
-                    </div>
-                </div>
-
-                <div class="project-icon" id="r-lesson">
-                    <div class="project-icon-head">
-                        <i class="fab fa-2x fa-r-project"></i>
-                        <p>Analiza danych</p>
-                    </div>
-                    <div class="project-icon-body" id="r-lesson-body">
-                        <p>W ramach studiów magisterskich i doktorankcich nauczyłem się analizować dane w programie SPSS.</p>
-                        <p>Dodatkowo uczestniczę w zajeciach dot. bezpośrednio języka R.</p>
-                    </div>
-                </div>
-
-                <div class="project-icon" id="ih-grant">
-                    <div class="project-icon-head">
-                        <i class="fas fa-2x fa-graduation-cap"></i>
-                        <p>Uniwersytecki grant badawczy</p>
-                    </div>
-                    <div class="project-icon-body" id="ih-grant-body">
-                        <p>Jestem pomysłodawcą i jedną z trzech osób interdyscyplinarnego zespołu grantowego.</p>
-                        <p>Autorskie badanie dotyczy otwartości poznawczej w kontekście polityki.</p>
-                        <p>Samodzielnie przeprowadziłem analizy regresji krzywoliniowej w skrypcie Python z biblioteką scikit-learn.</p>
-                        <p>Wyniki wizualizowałem z bilbioteką python-plotly.</p>
+                        <div class="exp-icon-body" id="boredom-body">
                     </div>
                 </div>
             </div>
+-->
         </div>
     </div>
 </body>

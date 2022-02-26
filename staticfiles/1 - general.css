@@ -64,3 +64,12 @@
 
     transition:1s;
 }
+
+.title {
+    width:100%;
+    font-size:80px;
+    color:rgba(178, 255, 158,1);
+    text-align:center;
+    margin:0px;
+    padding:0px;
+}

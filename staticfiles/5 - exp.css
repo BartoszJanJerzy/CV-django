@@ -1,0 +1,41 @@
+#exp-page {
+    /*border:1px solid white;*/
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+
+#graphs-div {
+    width:85%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+.graph-div {
+    margin:2px;
+    opacity:0.5;
+    transition:1s;
+}
+.graph-div:hover {
+    opacity:1;
+    transition:1s;
+}
+#exp-graph {
+    width:59%;
+    min-width:800px;
+}
+#task-graph {
+    width:39%;
+    min-width:600px;
+}
+#data-types-graph {
+    width:49%;
+    min-width:600px;
+}
+#skills-graph {
+    width:49%;
+    min-width:600px;
+}
