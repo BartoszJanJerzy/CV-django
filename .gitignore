@@ -3,5 +3,3 @@ venv
 *pyc
 *.idea
 *.sqlite3
-*.jpg
-*.png
