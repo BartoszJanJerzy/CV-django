@@ -4,15 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Bartosz Wójtowicz CV</title>
-
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-THTRXLT');</script>
-        <!-- End Google Tag Manager -->
-
         <link rel="icon" href="{% static 'logo160.png' %}">
 
 <!--        GOOGLE FONTS-->
@@ -28,6 +19,7 @@
         <script src="{% static 'script1.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script2.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script3.js' %}" crossorigin="anonymous" defer></script>
+        <script src="{% static 'script4.js' %}" crossorigin="anonymous" defer></script>
 <!--         FONT-AWESOME -->
         <script src="https://kit.fontawesome.com/607ca086f9.js" crossorigin="anonymous"></script>
 <!--         MDB -->
@@ -45,8 +37,8 @@
             <div id="sub-menu">
                 <a class="menu-link" href="#title-page">Start</a>
                 <a class="menu-link" href="#about-page">About</a>
-                <a class="menu-link" href="#skills-page">Kursy</a>
-                <a class="menu-link" href="#projects-page">Projekty</a>
+                <a class="menu-link" href="#skills-page">Courses</a>
+                <a class="menu-link" href="#exp-page">Current Job</a>
             </div>
         </div>
         <i class="fas fa-3x fa-hamburger" id="burger"></i>
@@ -61,24 +53,19 @@
                     <h1 id="name">Bartosz Wójtowicz</h1>
                 </div>
                 <div class="heading">
-                    <a href="https://phd.kul.pl/"><i class="fas fa-2x fa-graduation-cap"></i></a>
-                    <h2 id="education">Szkoła Doktorska</h2>
+                    <i class="fas fa-2x fa-graduation-cap"></i>
+                    <h2 id="education">Master Degree in Social Science</h2>
                 </div>
                 <div class="heading">
                     <i id="mail-icon" class="fas fa-2x fa-envelope"></i>
                     <h2 id="mail">bartoszjanjerzy @ gmail.com</h2>
                     <i id="copy-mail-confirm" class="fas fa-clone" style="color:rgba(178, 255, 158, 1)"></i>
                 </div>
-                <div class="heading">
-                    <i id="phone-icon" class="fas fa-2x fa-phone-square-alt" value="519466559"></i>
-                    <h2 id="phone">519-466-559</h2>
-                    <i id="copy-phone-confirm" class="fas fa-clone copy" style="color:rgba(178, 255, 158, 1)"></i>
-                </div>
 
                 <div id="title-link-div">
-                    <a class="title-link" id="about-link" href="#about-page">O mnie</a>
-                    <a class="title-link" id="skills-link" href="#skills-page">Kursy</a>
-                    <a class="title-link" id="projects-link" href="#projects-page">Projekty</a>
+                    <a class="title-link" id="about-link" href="#about-page">About</a>
+                    <a class="title-link" id="skills-link" href="#skills-page">Courses</a>
+                    <a class="title-link" id="projects-link" href="#exp-page">Current Job</a>
                 </div>
             </div>
             <div id="bufor"></div>
@@ -87,32 +74,28 @@
 <!--        ABOUT-->
         <div class="page" id="about-page">
             <div id="about-text-div">
-                <h1 class="title" id="about-title">O mnie</h1>
+                <h1 class="title" id="about-title">About</h1>
                 <i class="fas fa-2x fa-user-tie"></i>
-                <P class="about-par">Jestem młodym naukowcem w Szkole Doktorskiej - prowadzę badania empiryczne dotyczące otwartości
-                    poznawczej w kwestiach światopoglądu, polityki i religii.</P>
-                <P class="about-par">W pracy poza uczelnią (młodszy specjalista ds. badań, full remote, od. 12.2020r.)
-                    tworzę narzędzia do badań rynkowych, analizy rynkowe, wykonuję obliczenia statystyczne.</P>
+                <P class="about-par">I am a Junior Data Scientist in Asseco Business Solutions.</P>
+                <P class="about-par">Analyzing & data visualization, using ML algorithms and programming skills are what I do every day.</P>
 
                 <i class="fab fa-2x fa-python"></i>
-                <P class="about-par">Moim najbliższym celem zawodowym jest wejście do branży IT - od roku poświęcam wolny czas na naukę programowania.</P>
-                <P class="about-par">Uczę się głównie Pythona w kierunku analizy danych i tworzenia aplikacji webowych.</P>
-                <P class="about-par">Poznałem również podstawy front-endu.</P>
-
-                <i class="fas fa-2x fa-users"></i>
-                <P class="about-par">Praca w zespole naukowym nauczyła mnie systematyczności, samodyscypliny i komunikacji.</P>
-                <P class="about-par">Potrafię również sam prowadzić zespół - z sukcesami przewodniczyłem Studenckiemu Kołu Neuronauk.</P>
+                <P class="about-par">I spent some time to change my previous industry to IT. I believed that I can do it and it was not a mistake.
+                    Now, I have work of the future - analyzing tons of data, finding insights and serving services into business.</P>
+                <P class="about-par">I am motivated, responsible and happy programmer with energy to growing up in IT skills.</P>
 
                 <i class="fas fa-2x fa-football-ball"></i>
-                <P class="about-par">Nadmair energii pożytkuję grając w drużynie footballu amerykańskiego.</P>
-                <P class="about-par">Uwielbiam też wędrować po górach, śpiewać i grać na gitarze.</P>
+                <P class="about-par">Personally, I'm an american football player in local amateur team.</P>
+                <P class="about-par">I love sport challenges and mountain hiking!</P>
+                <P class="about-par">Additionally, I enjoy listening to rock & metal bands (e.g. Black Sabbath, Riverside),
+                    exploring fantasy and sci-fi universes (e.g. Tolkien's MiddleEarth, Herbert's Dune), playing on my guitars.</P>
             </div>
             <img id="personal-2-img" src="{% static 'personal-2.jpg' %}">
         </div>
 
 <!--        SKILLS-->
         <div class="page" id="skills-page">
-            <h1 class="title" id="kursy-title">Ukończone kursy</h1>
+            <h1 class="title" id="kursy-title">Courses</h1>
             <div id="kursy-div">
                 {% for k in kurs%}
                     <a class="kurs-link" href="https://www.udemy.com/course/{{ k.link }}" target="_blank">
@@ -131,7 +114,7 @@
 
 <!--        JOB EXPERIENCE-->
         <div class="exp" id="exp-page">
-            <h1 class="title" id="exp-title">Professional experience</h1>
+            <h1 class="title" id="exp-title">Professional experience in IT <p id="timer"></p></h1>
             <div id="graphs-div">
                 <div class="graph-div" id="exp-graph">
                     {% if exp_graph %}
@@ -162,19 +145,6 @@
                     {% endif %}
                 </div>
             </div>
-
-<!--
-            <div id="exp-div">
-                <div class="exp-icon" id="boredom-script">
-                    <div class="exp-icon-head">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <p>Praca naukowa</p>
-                    </div>
-                        <div class="exp-icon-body" id="boredom-body">
-                    </div>
-                </div>
-            </div>
--->
         </div>
     </div>
 </body>

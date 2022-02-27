@@ -14,6 +14,17 @@ class JobExperienceGraph(Graph):
         self.graph = self.__make_graph()
 
 
+    def __get_colors(self) -> dict:
+        colors = dict(
+            grey1 = 'rgba(130, 130, 130, 0.35)',
+            grey2 = 'rgba(70, 70, 70, 0.35)',
+            grey3 = 'rgba(20, 20, 20, 0.35)',
+            blue = 'rgba(0, 0, 255, 0.5)'
+        )
+
+        return colors
+
+
     def __get_trace_data(self, start: str, periods: int, value) -> dict:
         dates = pd.date_range(start=start, periods=periods, freq='M')
         values = [value for i in range(periods)]
@@ -40,30 +51,46 @@ class JobExperienceGraph(Graph):
 
 
     def __make_graph(self) -> go.Figure():
-        fig = make_subplots(specs=[[{"secondary_y": True}]])
+        colors = self.__get_colors()
+
+        fig = make_subplots(
+            cols=1, rows=2,
+            specs=[
+                [{'type':'xy', "secondary_y": True}],
+                [{'type':'table'}]
+            ]
+        )
 
         # Data Scientist
         periods_data = self.__diff_month(datetime.now(), datetime(2021, 7, 31))
         trace_dict = self.__get_trace_data('08/1/2021', periods_data, 3)
         fig.add_trace(
-            self.__get_trace('Data Scientist', list(trace_dict.keys()), list(trace_dict.values()), 'rgba(0, 0, 255, 0.5)'))
+            self.__get_trace('Data Scientist', list(trace_dict.keys()), list(trace_dict.values()), colors['blue']),
+            row = 1, col = 1
+        )
 
         # Junior Research Specialist
         periods_research = 9
         trace_dict = self.__get_trace_data('11/1/2020', periods_research, 2)
         fig.add_trace(
-            self.__get_trace('Research Specialist', list(trace_dict.keys()), list(trace_dict.values()), 'rgba(20, 20, 20, 0.35)'))
+            self.__get_trace('R&D Specialist', list(trace_dict.keys()), list(trace_dict.values()), colors['grey3']),
+            row = 1, col = 1
+        )
 
         # Social science
         periods_science = 28
         trace_dict = self.__get_trace_data('10/1/2019', periods_science, 1)
         fig.add_trace(
-            self.__get_trace('Social Science', list(trace_dict.keys()), list(trace_dict.values()), 'rgba(70, 70, 70, 0.35)'))
+            self.__get_trace('PhD in Social Science', list(trace_dict.keys()), list(trace_dict.values()), colors['grey2']),
+            row = 1, col = 1
+        )
 
         # Other
         periods_other = 4
         trace_dict = self.__get_trace_data('7/1/2019', periods_other, 0)
-        fig.add_trace(self.__get_trace('Other', list(trace_dict.keys()), list(trace_dict.values()), 'rgba(130, 130, 130, 0.35)'))
+        fig.add_trace(self.__get_trace('Other', list(trace_dict.keys()), list(trace_dict.values()), colors['grey1']),
+            row = 1, col = 1
+        )
 
         # Job satisfaction
         periods = self.__diff_month(datetime.now(), datetime(2019, 6, 30))
@@ -78,11 +105,35 @@ class JobExperienceGraph(Graph):
             y=values,
             mode='lines',
             line=dict(color='orange')
-        ), secondary_y=True)
+        ), secondary_y=True, row=1, col=1)
+
+        #Table
+        data_science_length = None
+        if len(values_data) == 12:
+            data_science_length = '1y'
+        elif len(values_data) > 12:
+            y = int(periods / 12)
+            m = periods % 12
+            data_science_length = f'{y}y {m}m'
+        else:
+            data_science_length = f'{len(values_data)}m'
+
+
+        fig.add_trace(go.Table(
+            header=dict(
+                values = ['', 'Other', 'PhD', 'R&D Specialist', 'Data Scientist'],
+                align = 'center',
+                fill_color = ['white', colors['grey1'], colors['grey2'], colors['grey3'], colors['blue']]
+            ),
+            cells = dict(
+                values = [['Time spent'], ['4m'], ['2y 4m'], ['9m'], [data_science_length]],
+                align = 'center'
+            )
+        ), row=2, col=1)
 
         fig.update_layout(
             title=dict(
-                text='Learning programming and statistical skills allowed me<br>to switch industry to a Data Science and strongly increased my job satisfaction.',
+                text='History of my professional experience:<br>I switched industry to a Data Science and it strongly increased my job satisfaction.',
                 font_size = 20,
                 font = dict(family='Arial')
             ),
@@ -94,8 +145,7 @@ class JobExperienceGraph(Graph):
                 anchor="free",
                 side="right",
             ),
+            margin = dict(b=0)
         )
-
-        fig.update_xaxes(rangeslider_visible=True)
 
         return fig
