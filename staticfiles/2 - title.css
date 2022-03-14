@@ -59,7 +59,7 @@
     padding:0px;
     margin:0px;
 }
-#education, #mail, #phone {
+.personal-info {
     font-size:40px;
     padding:0px;
     margin:0px;
@@ -117,8 +117,11 @@
 #skills-link {
     animation:ShowSlowly3 4.5s ease 1;
 }
-#projects-link {
+#exp-link {
     animation:ShowSlowly3 6.5s ease 1;
+}
+#projects-link {
+    animation:ShowSlowly3 8.5s ease 1;
 }
 
 /* PHOTO */

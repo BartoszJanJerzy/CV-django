@@ -1,11 +1,7 @@
-var phone_icon = document.getElementById('phone-icon');
 var mail_icon = document.getElementById('mail-icon');
-//var phone_num = document.getElementById('phone');
-var copy_phone_confirm = document.getElementById('copy-phone-confirm');
 var copy_mail_confirm = document.getElementById('copy-mail-confirm');
 
-
-function CopyPhoneNumber(text, object) {
+function CopyString(text, object) {
     // Create new element
     var el = document.createElement('textarea');
 
@@ -34,9 +30,7 @@ function CopyPhoneNumber(text, object) {
     }, 1000);
 };
 
-phone_icon.onclick = function(){
-    CopyPhoneNumber('519466559', copy_phone_confirm);
-};
+
 mail_icon.onclick = function(){
-    CopyPhoneNumber('bartoszjanjerzy@gmail.com', copy_mail_confirm);
+    CopyString('bartoszjanjerzy@gmail.com', copy_mail_confirm);
 };

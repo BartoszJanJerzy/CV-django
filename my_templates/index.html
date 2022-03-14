@@ -14,6 +14,7 @@
         <link href="{% static '3 - about.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '4 - kursy.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static '5 - exp.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '6 - projects.css' %}" rel="stylesheet" type="text/css">
 <!--         JAVA SCRIPT -->
         <script src="{% static 'jquery.js' %}" crossorigin="anonymous" defer></script>
         <script src="{% static 'script1.js' %}" crossorigin="anonymous" defer></script>
@@ -39,6 +40,7 @@
                 <a class="menu-link" href="#about-page">About</a>
                 <a class="menu-link" href="#skills-page">Courses</a>
                 <a class="menu-link" href="#exp-page">Current Job</a>
+                <a class="menu-link" href="#projects-page">Projects</a>
             </div>
         </div>
         <i class="fas fa-3x fa-hamburger" id="burger"></i>
@@ -53,19 +55,24 @@
                     <h1 id="name">Bartosz Wójtowicz</h1>
                 </div>
                 <div class="heading">
+                    <i class="fa-solid fa-2x fa-user-tie"></i>
+                    <h2 class="personal-info"> Junior Data Scientist</h2>
+                </div>
+                <div class="heading">
                     <i class="fas fa-2x fa-graduation-cap"></i>
-                    <h2 id="education">Master Degree in Social Science</h2>
+                    <h2 class="personal-info">Master Degree in Social Science</h2>
                 </div>
                 <div class="heading">
                     <i id="mail-icon" class="fas fa-2x fa-envelope"></i>
-                    <h2 id="mail">bartoszjanjerzy @ gmail.com</h2>
+                    <h2 class="personal-info">bartoszjanjerzy @ gmail.com</h2>
                     <i id="copy-mail-confirm" class="fas fa-clone" style="color:rgba(178, 255, 158, 1)"></i>
                 </div>
 
                 <div id="title-link-div">
                     <a class="title-link" id="about-link" href="#about-page">About</a>
                     <a class="title-link" id="skills-link" href="#skills-page">Courses</a>
-                    <a class="title-link" id="projects-link" href="#exp-page">Current Job</a>
+                    <a class="title-link" id="exp-link" href="#exp-page">Current Job</a>
+                    <a class="title-link" id="projects-link" href="#projects-page">Projects</a>
                 </div>
             </div>
             <div id="bufor"></div>
@@ -143,6 +150,22 @@
                     {% else %}
                     <p>No graph was provided.</p>
                     {% endif %}
+                </div>
+            </div>
+
+<!--        PROJECTS-->
+            <div class="page" id="projects-page">
+                <h1 class="title" id="projects-title">Projects</h1>
+                <div class="project-item" id="space-tytanic">
+                    <h3 class="projects-item-title"><i class="fa-solid fa-user-astronaut"></i><i class="fa-solid fa-anchor"></i></h3>
+                    <P class="projects-par">
+                        I've been preparing a solution for KAGGLE Spaceship Tytanic competiton.
+                        <a href="https://www.kaggle.com/c/spaceship-titanic" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </P>
+                    <P class="projects-par">
+                        Click and see GIT repo!
+                        <a href=https://github.com/BartoszJanJerzy/SpaceshipTytanic target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </P>
                 </div>
             </div>
         </div>
